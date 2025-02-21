@@ -1,10 +1,12 @@
 const prompt = require('prompt-sync')()
-let Sum = 0, i = 0
+let Sum = 0
+let i = 0
+let num = Number(prompt("Enter numbers (negative to stop) : "))
 
-while(true){
-    let num = Number(prompt("Enter numbers (negative to stop) : "))
-    if (num < 0) break
+while(num > 0){
     Sum += num
+    num = Number(prompt("Enter numbers (negative to stop) : "))
     i++
 }
+
 console.log("Average:", Sum / i)
